@@ -1,16 +1,43 @@
-<!DOCTYPE html>
-<html lang="it" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <title></title>
-</head>
-<body>
 
     <!-- 2nd milestone
     per la seconda milestone, index.html dovrà eseguire una chiamata ajax (meglio se con vuejs) verso app/server.php
 
     -->
-
-
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Dischi Milestone 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    
+    </header>
+    <main id="root">
+        <div class="container">     
+            <div class="album" v-for="element in listDisks">
+                <div class="cover">
+                <img :src="element.poster" alt="">
+                </div>
+                <div class="title">
+                <h2>{{element.title}}</h2>
+                </div>
+                <div class="author">
+                <h3>{{element.author}}</h3>
+                </div>
+                <div class="year">
+                <h4>{{element.year}}</h4>
+                </div>       
+            </div>    
+        </div>
+    </main>
+    <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>
