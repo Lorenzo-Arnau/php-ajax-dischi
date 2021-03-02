@@ -1,0 +1,51 @@
+@import "vars";
+@import "fonts";
+
+*{
+    @include default;
+    font-family: $pageFont;
+}
+header{
+    height: 120px;
+    background-color: black;
+}
+main{
+   @include flex-row;
+   justify-content: center;
+   background-color: #191919;
+   width: 100%;
+
+   .container{
+       @include flex-row;
+       flex-wrap: wrap;
+       justify-content: space-around;
+       width: 70%;
+       height: 100%;
+       .album{
+           @include flex-col;
+           margin: 20px;
+           width: 300px;
+           height: 400px;
+           background-color: #000;
+           .cover{
+               @include flex-row;
+               justify-content: center;
+               height: 60%;
+               width: 100%;
+               img{
+                   height: 100%;
+               }
+           }
+           .title,.author,.year{
+               height: 13% ;
+               width: 100%;
+               text-align: center;
+               color: #fff;
+               padding-top: 20px;  
+           }
+           .author{
+               color: #303030;
+           }
+       }
+   }
+}
