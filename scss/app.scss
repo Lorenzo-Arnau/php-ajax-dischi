@@ -8,12 +8,16 @@
 header{
     height: 120px;
     background-color: black;
+    span{
+        background-color: #fff;
+    }
 }
 main{
    @include flex-row;
    justify-content: center;
    background-color: #191919;
    width: 100%;
+   min-height: calc(100vh - 120px);
 
    .container{
        @include flex-row;

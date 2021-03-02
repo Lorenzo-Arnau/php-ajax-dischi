@@ -9,6 +9,9 @@ header {
   height: 120px;
   background-color: black;
 }
+header span {
+  background-color: #fff;
+}
 
 main {
   display: flex;
@@ -16,6 +19,7 @@ main {
   justify-content: center;
   background-color: #191919;
   width: 100%;
+  min-height: calc(100vh - 120px);
 }
 main .container {
   display: flex;
