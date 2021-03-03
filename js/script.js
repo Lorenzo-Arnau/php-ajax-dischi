@@ -14,6 +14,14 @@ new Vue({
         });
     },
     methods:{
+      generateOptions : function(parentArray,value,destinationArray){
+        const self = this;
+        parentArray.forEach((item, i) => {
+        if (!destinationArray.includes(item[value])) {
+          destinationArray.push(item[value])
+        }
+      });
+    },
       changeList:function(){
         const self = this;
         console.log(self.filterValue);
