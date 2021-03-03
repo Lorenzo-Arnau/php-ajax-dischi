@@ -6,11 +6,14 @@
     font-family: $pageFont;
 }
 header{
+    @include flex-row;
     width: 100%;
     height: 120px;
-    background-color: black;
-    span{
+    background-color: #000;
+    span,input,select,label{
         background-color: #fff;
+        height: 25px;
+        margin: 0 25px;
     }
 }
 main{
@@ -23,9 +26,27 @@ main{
    .container{
        @include flex-row;
        flex-wrap: wrap;
+       position: relative;
        justify-content: space-around;
        width: 70%;
        height: 100%;
+       .error{
+        position: absolute;
+        background-color: #fff;
+        background-position: center;
+        background-size: cover;
+        background-image: url("https://img.freepik.com/free-vector/400-error-bad-request-concept-illustration_114360-1933.jpg?size=338&ext=jpg");
+        height: 250px;
+        width: 320px;
+        button{
+            width: 50px;
+            height: 100px;
+            font-weight: bold;
+            background-color: antiquewhite;
+            border-radius: 20px;
+            box-shadow: 1px 1px 5px #000;
+        }
+       }
        .album{
            @include flex-col;
            margin: 20px;

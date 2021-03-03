@@ -20,19 +20,21 @@
     <div id="root">
         <header>
             <select name="selection" id="" v-model="filterValue" @change="changeList()">
-                <option value="">All</option>
+                <option value="All">All</option>
                 <option value="Rock">Rock</option>
                 <option value="Pop">Pop</option>
                 <option value="Jazz">Jazz</option>
                 <option value="Metal">Metal</option>
-                <option value="0">Errore</option>
-                <option value="Errore">ErroreDue</option>
+                <option value="0">TestErrore</option> <!--questa opzione è un test di errore-->
+                <option value="Errore">TestErroreDue</option> <!--questa opzione è un test di errore-->
             </select>
             <span>Filtro:{{filterValue}}</span>
-            <input type="text" v-model='filterValue' @keyup.enter="changeList()">
+            <label for="searchbar">Search</label>
+            <input type="text" v-model='filterValue' @keyup.enter="changeList()" name='searchbar'>
         </header>
         <main>
-            <div class="container">     
+            <div class="container">
+                <div class="error"v-bind:style="{ opacity: popUpSwitch}"><button @click="closePopUp()">close</button></div>     
                 <div class="album" v-for="element in listDisks">
                     <div class="cover">
                     <img :src="element.poster" alt="">
