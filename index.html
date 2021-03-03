@@ -29,6 +29,7 @@
                 <option value="Errore">ErroreDue</option>
             </select>
             <span>Filtro:{{filterValue}}</span>
+            <input type="text" v-model='filterValue' @keyup.enter="changeList()">
         </header>
         <main>
             <div class="container">     
