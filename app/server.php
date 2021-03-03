@@ -10,7 +10,7 @@ if (array_key_exists ( 'genere' , $_GET ) && !empty($_GET['genere'])) {
      }); 
     }
 
-if (array_key_exists ( 'genere' , $_GET ) && empty($_GET['genere'])) {
+if (array_key_exists ( 'genere' , $_GET ) && empty($_GET['genere']) || count($dischi) == 0) {
     http_response_code(400);
     exit();
 }
